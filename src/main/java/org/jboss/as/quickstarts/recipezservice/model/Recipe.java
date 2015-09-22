@@ -3,7 +3,7 @@ package org.jboss.as.quickstarts.recipezservice.model;
 import java.io.Serializable;
 //
 //import javax.persistence.Column;
-//import javax.persistence.Entity;
+import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.Id;
 //import javax.persistence.Table;
@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 //import org.hibernate.validator.constraints.Email;
 //import org.hibernate.validator.constraints.NotEmpty;
 //
-//@Entity
+@Entity
 @XmlRootElement
 //@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class Recipe implements Serializable {
