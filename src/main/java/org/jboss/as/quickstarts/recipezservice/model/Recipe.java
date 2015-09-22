@@ -1,52 +1,49 @@
 package org.jboss.as.quickstarts.recipezservice.model;
 
 import java.io.Serializable;
-//
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.Id;
-//import javax.persistence.Table;
-//import javax.persistence.UniqueConstraint;
-//import javax.validation.constraints.Digits;
-//import javax.validation.constraints.NotNull;
-//import javax.validation.constraints.Pattern;
-//import javax.validation.constraints.Size;
+
 import javax.xml.bind.annotation.XmlRootElement;
-//
-//import org.hibernate.validator.constraints.Email;
-//import org.hibernate.validator.constraints.NotEmpty;
-//
+
+
 //@Entity
 @XmlRootElement
 //@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class Recipe implements Serializable {
 
-  // @Id
- //  @GeneratedValue
    private String id;
-
-  // @NotNull
-  // @Size(min = 1, max = 25)
-  // @Pattern(regexp = "[A-Za-z ]*", message = "must contain only letters and spaces")
+   
    private String name;
 
-  // @NotNull
-  // @NotEmpty
-  // @Email
-   private String email;
-
-//   @NotNull
-//   @Size(min = 10, max = 12)
-//   @Digits(fraction = 0, integer = 12)
-//   @Column(name = "phone_number")
-   private String phoneNumber;
+   private int servingSize;
+   
+   //IN MINUTES
+   private int preparationTime;
+   
+   private List<String> ingredients;
+   
+   private List<String> instructions;
    
    public Recipe(){
-	   id = "IDNUMBA";
-	   name = "WHAT??";
-	   email = "123@gmail.com";
-	   phoneNumber= "WOAH";
+	   id = 0;
+	   name = "Speedy Sticky Lemon Chicken";
+	   servingSize = 2;
+	   
+	   ingredients.add("2 chicken breast fillet chunks, skinless and boneless");
+	   ingredients.add("1 small red pepper, sliced");
+	   ingredients.add("Small handful fine beans");
+	   ingredients.add("Small handful tenderstem broccoli");
+	   ingredients.add("250ml hot chicken stock");
+	   ingredients.add("Juice of 1 lemon");
+	   ingredients.add("1 tbsp soy sauce");
+	   ingredients.add("1 tbsp honey");
+	   ingredients.add("1 tbsp cornflour");
+	   ingredients.add("150g steamed basmati rice to serve");
+	   
+	   instructions.add("1) Stir the lemon juice, soy sauce and honey into the stock and set aside.)"
+	   		+ "2) Put the cornflour in a small bowl and roll the chicken around in it to coat."
+	   		+ "3) Fry the chicken in a hot wok for a few minutes, followed by all of the veg."
+	   		+ "4) Pour in the lemon stock mixture and simmer for about 5 minutes until everything is cooked through and hot."
+	   		+ "5) Serve with steamed basmati rice.")
    }
 
    public String getId() {
@@ -63,21 +60,5 @@ public class Recipe implements Serializable {
 
    public void setName(String name) {
       this.name = name;
-   }
-
-   public String getEmail() {
-      return email;
-   }
-
-   public void setEmail(String email) {
-      this.email = email;
-   }
-
-   public String getPhoneNumber() {
-      return phoneNumber;
-   }
-
-   public void setPhoneNumber(String phoneNumber) {
-      this.phoneNumber = phoneNumber;
    }
 }
