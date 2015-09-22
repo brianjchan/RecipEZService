@@ -24,7 +24,7 @@ public class Recipe implements Serializable {
    private List<String> instructions;
    
    public Recipe(){
-	   id = 0;
+	   id = "0";
 	   name = "Speedy Sticky Lemon Chicken";
 	   servingSize = 2;
 	   
