@@ -33,8 +33,8 @@ public class FetchRecipeService {
       // the @Entity class
       // as described in the named query blueprint:
       // https://blueprints.dev.java.net/bpcatalog/ee5/persistence/namedquery.html
-      final List<Recipe> results = em.createQuery("select m from Member m order by m.name").getResultList();
-      return results;
+      //final List<Recipe> results = em.createQuery("select m from Member m order by m.name").getResultList();
+      return "<text>YO<text/>";
    }
 
    @GET
