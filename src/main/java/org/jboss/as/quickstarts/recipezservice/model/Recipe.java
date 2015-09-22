@@ -13,7 +13,7 @@ public class Recipe implements Serializable {
    
    private String name;
 	
-	 @XmlElement(name = "serving size", required = false)
+	 @XmlElement(name = "servingSize", required = false)
    private String servingSize;
    
    //IN MINUTES
