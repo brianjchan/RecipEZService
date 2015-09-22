@@ -28,6 +28,9 @@ public class Recipe implements Serializable {
 	   name = "Speedy Sticky Lemon Chicken";
 	   servingSize = 2;
 	   
+	   ingredients = new List<String>();
+	   instructions = new List<String>();
+	   
 	   ingredients.add("2 chicken breast fillet chunks, skinless and boneless");
 	   ingredients.add("1 small red pepper, sliced");
 	   ingredients.add("Small handful fine beans");
