@@ -12,7 +12,7 @@ public class Recipe implements Serializable {
 
    private String id;
    
-   private String na;
+   private String name;
 
    private String servingSize;
    
@@ -24,10 +24,10 @@ public class Recipe implements Serializable {
    private ArrayList<String> instructions;
    
    public Recipe(){
-	   id = "12";
-	   na = "Speedy Sticky Lemon Chicken";
-	   servingSize = "9254825269";
-	   preparationTime = "unspecified";
+	   id = "0";
+	   name = "Speedy Sticky Lemon Chicken";
+	   servingSize = "2";
+	   preparationTime = "unspecified"
 	   
 	   ingredients = new ArrayList<String>();
 	   instructions = new ArrayList<String>();
@@ -58,11 +58,11 @@ public class Recipe implements Serializable {
       this.id = id;
    }
 
-//   public String getName() {
-//      return names;
-//   }
-//
-//   public void setName(String name) {
-//      this.names = name;
-//   }
+   public String getName() {
+      return name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
 }
