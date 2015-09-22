@@ -20,8 +20,8 @@ import org.jboss.as.quickstarts.recipezservice.model.Recipe;
 //@Path("/recipes")
 //@RequestScoped
 public class FetchRecipeService {
-   @Inject
-   private EntityManager em;
+//   @Inject
+//   private EntityManager em;
 
 //   @GET
 //   @Produces("text/xml")
