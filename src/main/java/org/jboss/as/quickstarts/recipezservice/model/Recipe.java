@@ -18,10 +18,10 @@ public class Recipe implements Serializable {
    
    //IN MINUTES
    private String preparationTime;
-   @XmlElement(name = "ingredients", required = false)
+   //@XmlElement(name = "ingredients", required = false)
    private ArrayList<String> ingredients;
    
-   @XmlElement(name = "instructions", required = false)
+   //@XmlElement(name = "instructions", required = false)
    private ArrayList<String> instructions;
    
    public Recipe(){
