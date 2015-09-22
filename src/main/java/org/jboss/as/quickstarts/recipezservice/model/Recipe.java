@@ -14,10 +14,10 @@ public class Recipe implements Serializable {
    
    private String names;
 
-   private int servingSize;
+   private String servingSize;
    
    //IN MINUTES
-   private int preparationTime;
+   private String preparationTime;
    
    private ArrayList<String> ingredients;
    
@@ -26,7 +26,8 @@ public class Recipe implements Serializable {
    public Recipe(){
 	   id = "0";
 	   names = "Speedy Sticky Lemon Chicken";
-	   servingSize = 2;
+	   servingSize = "2";
+	   preparationTime = "unspecified";
 	   
 	   ingredients = new ArrayList<String>();
 	   instructions = new ArrayList<String>();
