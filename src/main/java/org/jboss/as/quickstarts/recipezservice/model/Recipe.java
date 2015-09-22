@@ -43,7 +43,7 @@ public class Recipe implements Serializable {
    private String phoneNumber;
    
    public Recipe(){
-	   id = 0;
+	   id = "IDNUMBA";
 	   name = "WHAT??";
 	   email = "123@gmail.com";
 	   phoneNumber= "WOAH";
