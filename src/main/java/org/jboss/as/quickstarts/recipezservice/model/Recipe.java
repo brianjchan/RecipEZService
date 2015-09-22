@@ -2,8 +2,7 @@ package org.jboss.as.quickstarts.recipezservice.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import javax.xml.bind.annotation.XmlRootElement;
-
+import javax.xml.bind.annotation.*;
 
 //@Entity
 @XmlRootElement
