@@ -1,7 +1,7 @@
 package org.jboss.as.quickstarts.recipezservice.model;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
@@ -19,17 +19,17 @@ public class Recipe implements Serializable {
    //IN MINUTES
    private int preparationTime;
    
-   private List<String> ingredients;
+   private ArrayList<String> ingredients;
    
-   private List<String> instructions;
+   private ArrayList<String> instructions;
    
    public Recipe(){
 	   id = "0";
 	   name = "Speedy Sticky Lemon Chicken";
 	   servingSize = 2;
 	   
-	   ingredients = new List<String>();
-	   instructions = new List<String>();
+	   ingredients = new ArrayList<String>();
+	   instructions = new ArrayList<String>();
 	   
 	   ingredients.add("2 chicken breast fillet chunks, skinless and boneless");
 	   ingredients.add("1 small red pepper, sliced");
