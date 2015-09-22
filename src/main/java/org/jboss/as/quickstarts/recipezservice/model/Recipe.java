@@ -43,7 +43,7 @@ public class Recipe implements Serializable {
 	   		+ "2) Put the cornflour in a small bowl and roll the chicken around in it to coat."
 	   		+ "3) Fry the chicken in a hot wok for a few minutes, followed by all of the veg."
 	   		+ "4) Pour in the lemon stock mixture and simmer for about 5 minutes until everything is cooked through and hot."
-	   		+ "5) Serve with steamed basmati rice.")
+	   		+ "5) Serve with steamed basmati rice.");
    }
 
    public String getId() {
