@@ -1,7 +1,7 @@
 package org.jboss.as.quickstarts.recipezservice.model;
 
 import java.io.Serializable;
-
+import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
