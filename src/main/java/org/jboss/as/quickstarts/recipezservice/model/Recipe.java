@@ -27,7 +27,7 @@ public class Recipe implements Serializable {
 	   id = "0";
 	   name = "Speedy Sticky Lemon Chicken";
 	   servingSize = "2";
-	   preparationTime = "unspecified"
+	   preparationTime = "unspecified";
 	   
 	   ingredients = new ArrayList<String>();
 	   instructions = new ArrayList<String>();
