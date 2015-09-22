@@ -24,7 +24,7 @@ public class Recipe implements Serializable {
 
   // @Id
  //  @GeneratedValue
-   private Long id;
+   private String id;
 
   // @NotNull
   // @Size(min = 1, max = 25)
