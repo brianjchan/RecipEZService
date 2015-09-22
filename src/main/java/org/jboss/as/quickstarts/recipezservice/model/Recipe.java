@@ -19,30 +19,35 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @XmlRootElement
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+//@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class Recipe implements Serializable {
-   /** Default value included to remove warning. Remove or modify at will. **/
-   private static final long serialVersionUID = 1L;
 
-   @Id
-   @GeneratedValue
+  // @Id
+ //  @GeneratedValue
    private Long id;
 
-   @NotNull
-   @Size(min = 1, max = 25)
-   @Pattern(regexp = "[A-Za-z ]*", message = "must contain only letters and spaces")
+  // @NotNull
+  // @Size(min = 1, max = 25)
+  // @Pattern(regexp = "[A-Za-z ]*", message = "must contain only letters and spaces")
    private String name;
 
-   @NotNull
-   @NotEmpty
-   @Email
+  // @NotNull
+  // @NotEmpty
+  // @Email
    private String email;
 
-   @NotNull
-   @Size(min = 10, max = 12)
-   @Digits(fraction = 0, integer = 12)
-   @Column(name = "phone_number")
+//   @NotNull
+//   @Size(min = 10, max = 12)
+//   @Digits(fraction = 0, integer = 12)
+//   @Column(name = "phone_number")
    private String phoneNumber;
+   
+   public Recipe(){
+	   id = 0;
+	   name = "WHAT??";
+	   email = "123@gmail.com";
+	   phoneNumber= "WOAH";
+   }
 
    public Long getId() {
       return id;

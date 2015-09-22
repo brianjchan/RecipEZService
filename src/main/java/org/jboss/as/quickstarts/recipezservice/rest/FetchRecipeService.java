@@ -25,7 +25,7 @@ public class FetchRecipeService {
 
    @GET
    @Produces("text/xml")
-   public String listAllMembers() {
+   public Recipe listAllMembers() {
       // Use @SupressWarnings to force IDE to ignore warnings about "genericizing" the results of
       // this query
       @SuppressWarnings("unchecked")
@@ -34,7 +34,7 @@ public class FetchRecipeService {
       // as described in the named query blueprint:
       // https://blueprints.dev.java.net/bpcatalog/ee5/persistence/namedquery.html
       //final List<Recipe> results = em.createQuery("select m from Member m order by m.name").getResultList();
-      String yo ="<text>YO<text/>";
+      Recipe yo = new Recipe();
       return yo;
    }
 
