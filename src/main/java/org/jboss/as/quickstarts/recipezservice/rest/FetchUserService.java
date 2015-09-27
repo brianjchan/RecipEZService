@@ -19,7 +19,7 @@ import org.jboss.as.quickstarts.recipezservice.model.Recipe;
  */
 @Path("/users")
 @RequestScoped
-public class FetchRecipeService {
+public class FetchUserService {
    @Inject
    private EntityManager em;
 
