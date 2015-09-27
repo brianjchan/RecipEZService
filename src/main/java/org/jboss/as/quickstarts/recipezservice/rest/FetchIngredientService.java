@@ -25,7 +25,7 @@ public class FetchIngredientService {
 
    @GET
    @Produces("text/xml")
-   public Recipe listAllMembers() {
+   public Ingredient listAllMembers() {
       // Use @SupressWarnings to force IDE to ignore warnings about "genericizing" the results of
       // this query
       @SuppressWarnings("unchecked")
