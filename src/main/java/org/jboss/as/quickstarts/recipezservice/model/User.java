@@ -17,7 +17,7 @@ public class User implements Serializable {
    @XmlElement(name = "userName", required = false)
    private String userName;
       
-   public Recipe(){
+   public User(){
 	   userId = "0";
 	   userName = "Yolanda";
    }

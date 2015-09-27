@@ -19,7 +19,7 @@ public class Ingredient implements Serializable {
    @XmlElement(name = "ingredientAmount", required = false)
    private String ingredientAmount;
    
-   public Recipe(){
+   public Ingredient(){
 	   ingredientID = 0;
 	   ingredientName = "Cheddar Cheese";
 	   ingredientAmount = "10 oz";
