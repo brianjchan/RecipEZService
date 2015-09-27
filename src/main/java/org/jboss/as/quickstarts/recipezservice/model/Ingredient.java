@@ -13,8 +13,6 @@ public class Ingredient implements Serializable {
 	 @XmlElement(name = "ingredientId", required = false)
    private String ingredientID;
    
-   //IN MINUTES
-   private String preparationTime;
    @XmlElement(name = "ingredientName", required = false)
    private String ingredientName;
    
@@ -23,7 +21,7 @@ public class Ingredient implements Serializable {
    
    public Recipe(){
 	   ingredientID = 0;
-	   ingredientName = "Cheddar Cheese"
+	   ingredientName = "Cheddar Cheese";
 	   ingredientAmount = "10 oz";
    }
 
