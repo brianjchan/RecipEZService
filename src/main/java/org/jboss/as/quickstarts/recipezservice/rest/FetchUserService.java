@@ -10,7 +10,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import org.jboss.as.quickstarts.recipezservice.model.Recipe;
+import org.jboss.as.quickstarts.recipezservice.model.User;
 
 /**
  * JAX-RS Example
