@@ -1,4 +1,4 @@
-package org.jboss.as.quickstarts.recipezservice.data;
+package main.java.org.jboss.as.quickstarts.recipezservice.data;
 
 import org.jboss.as.quickstarts.recipezservice.model.Member;
 import java.util.List;
