@@ -20,7 +20,7 @@ public class Ingredient implements Serializable {
    private String ingredientAmount;
    
    public Ingredient(){
-	   ingredientID = 0;
+	   ingredientID = "0";
 	   ingredientName = "Cheddar Cheese";
 	   ingredientAmount = "10 oz";
    }

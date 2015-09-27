@@ -22,7 +22,7 @@ public class RecipeStep implements Serializable {
    private ArrayList<String> ingredients;
    
    public RecipeStep(ArrayList<String> ingredients){
-	   recipeStepId = 0;
+	   recipeStepId = "0";
 	   description = "Melt cheese";
 	   this.ingredients = ingredients;
    }
