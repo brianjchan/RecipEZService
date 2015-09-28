@@ -91,7 +91,7 @@
                 </datasource>
                 
 				<datasource jndi-name="java:/mydb" enabled="true" use-java-context="true" pool-name="my_pool" use-ccm="true">
-					<connection-url>jdbc:mysql://127.12.217.2:3306/</connection-url>
+					<connection-url>jdbc:mysql://127.12.217.2:3306/recipezservice</connection-url>
 					<driver>mysql</driver>
 				<security>
 					<user-name>adminyHZtReJ</user-name>
