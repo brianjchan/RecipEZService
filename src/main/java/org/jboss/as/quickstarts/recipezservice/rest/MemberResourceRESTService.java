@@ -26,6 +26,8 @@ public class MemberResourceRESTService {
    @GET
    @Produces("text/xml")
    public List<Member> listAllMembers() {
+	   javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup("jdbc/mysqlds");
+
       // Use @SupressWarnings to force IDE to ignore warnings about "genericizing" the results of
       // this query
       @SuppressWarnings("unchecked")

@@ -1,9 +1,16 @@
 package org.jboss.as.quickstarts.recipezservice.rest;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
+import javax.activation.DataSource;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.persistence.EntityManager;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -26,13 +33,34 @@ public class FetchUserService {
 
    @GET
    @Produces("text/xml")
-   public User listAllMembers() {
-      // Use @SupressWarnings to force IDE to ignore warnings about "genericizing" the results of
-      // this query
-      @SuppressWarnings("unchecked")
-     
-      User testUse = new User();
-      return testUse;
+   public String listAllMembers() throws SQLException {
+	   String returnString = "";
+	   final String sql = "select *";
+	   InitialContext ic;
+	   Connection con = null;
+	   Statement stmt = null;
+	   ResultSet rs = null;
+	   try {
+		   ic = new InitialContext();
+			DataSource ds = (DataSource) ic.lookup("java:/mydb");
+		   con =  ((Statement) ds).getConnection();
+		   stmt = con.createStatement();
+		   rs = stmt.executeQuery(sql);
+		   while(rs.next()) {
+			   returnString = ("Query '" + sql + "' returned " + rs.getString(1));
+		   }
+	   } catch (NamingException | SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} finally {
+	   			if(rs != null) rs.close();
+	   			if(stmt != null) stmt.close();
+	   			if(con != null) con.close();
+	   	}
+   
+	   
+      
+      return returnString;
    }
 
 
