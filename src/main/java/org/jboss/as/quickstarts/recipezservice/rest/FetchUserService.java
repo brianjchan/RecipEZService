@@ -49,7 +49,7 @@ public class FetchUserService {
 		   while(rs.next()) {
 			   returnString = ("Query '" + sql + "' returned " + rs.getString(1));
 		   }
-	   } catch (NamingException | SQLException e) {
+	   } catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	} finally {
