@@ -14,8 +14,8 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotEmpty;
+//import org.hibernate.validator.constraints.Email;
+//import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @XmlRootElement
@@ -34,8 +34,6 @@ public class Member implements Serializable {
    private String name;
 
    @NotNull
-   @NotEmpty
-   @Email
    private String email;
 
    @NotNull
