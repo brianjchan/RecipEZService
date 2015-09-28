@@ -50,8 +50,8 @@ public class FetchUserService {
 			   returnString = ("<test> Query '" + sql + "' returned " + rs.getString(1) + "</test>");
 //		   }
 	   } catch (Exception e) {
+		   return "<failure>"+ e.toString() +"</failure>";
 		// TODO Auto-generated catch block
-		e.printStackTrace();
 	} finally {
 	   			if(rs != null) rs.close();
 	   			if(stmt != null) stmt.close();
