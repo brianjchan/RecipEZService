@@ -40,15 +40,18 @@ public class FetchUserService {
 	   Connection con = null;
 	   Statement stmt = null;
 	   ResultSet rs = null;
+	   User u = new User();
 	   try {
 		   ic = new InitialContext();
 		   javax.sql.DataSource ds = (javax.sql.DataSource) ic.lookup("java:jboss/datasources/MySQLDS");
 		   con =  ds.getConnection();
 		   stmt = con.createStatement();
 		   rs = stmt.executeQuery(sql);
-		   if(rs.next())
-		   {
-			   returnString = returnString + ("<test> Query '" + sql + "' returned " + rs.getString(1) + "</test>");
+		   String name, id;
+		   while (rs.next()) {
+			   name = rs.getString("username");
+			   id = rs.getString("user_id");
+			   u = new User(id, name);
 		   }
 //		   }
 	   } catch (Exception e) {
@@ -60,9 +63,7 @@ public class FetchUserService {
 	   			if(con != null) con.close();
 	   	}
    
-	   
-      
-      return returnString;
+      return u.toString();
    }
 
 

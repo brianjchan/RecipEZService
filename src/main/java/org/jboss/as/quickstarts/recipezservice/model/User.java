@@ -21,5 +21,11 @@ public class User implements Serializable {
 	   userId = "0";
 	   userName = "Yolanda";
    }
+   
+   public User(String id, String name)
+   {
+	   userId = id;
+	   userName = name;
+   }
 
 }
