@@ -42,7 +42,7 @@ public class FetchUserService {
 	   ResultSet rs = null;
 	   try {
 		   ic = new InitialContext();
-		   javax.sql.DataSource ds = (javax.sql.DataSource) ic.lookup("java:jboss/datasources/PostgreSQLDS");
+		   javax.sql.DataSource ds = (javax.sql.DataSource) ic.lookup("java:jboss/datasources/MySQLDS");
 		   con =  ds.getConnection();
 		   stmt = con.createStatement();
 		   rs = stmt.executeQuery(sql);
