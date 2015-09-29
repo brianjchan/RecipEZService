@@ -25,7 +25,20 @@
          <password>${env.OPENSHIFT_POSTGRESQL_DB_PASSWORD}</password>
        </security>
    </datasource>
+    <datasource jndi-name="java:/mydb" enabled="true" use-java-context="false" jta="true" pool-name="my_pool" use-ccm="true">
+	<connection-url>jdbc:mysql://127.12.217.2:3306/recipezservice</connection-url>
+			<driver>mysql</driver>
+			<security>
+			<user-name>adminyHZtReJ</user-name>
+			<password>klvpDbyglamd</password>
+			</security>
+</datasource>
+
+   
+
    <drivers>
+   <driver name="mysql" module="com.mysql.jdbc">
+      </driver>
       <driver name="postgresql" module="org.postgresql.jdbc">
           <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
       </driver>
