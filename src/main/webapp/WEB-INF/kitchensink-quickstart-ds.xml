@@ -25,7 +25,7 @@
          <password>${env.OPENSHIFT_POSTGRESQL_DB_PASSWORD}</password>
        </security>
    </datasource>
-    <datasource jndi-name="java:/mydb" enabled="true" use-java-context="false" jta="true" pool-name="my_pool" use-ccm="true">
+    <datasource jndi-name="java:/mydc" enabled="true" use-java-context="false" jta="true" pool-name="my_pool" use-ccm="true">
 	<connection-url>jdbc:mysql://127.12.217.2:3306/recipezservice</connection-url>
 			<driver>mysql</driver>
 			<security>
