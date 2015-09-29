@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.activation.DataSource;
@@ -33,7 +34,8 @@ public class FetchUserService {
 
    @GET
    @Produces("text/xml")
-   public String listAllMembers() throws SQLException {
+   public ArrayList<User> listAllMembers() throws SQLException {
+	   ArrayList<User> users = new ArrayList<User>();
 	   String returnString = "";
 	   final String sql = "SELECT * FROM Users";
 	   InitialContext ic;
@@ -52,10 +54,11 @@ public class FetchUserService {
 			   name = rs.getString("username");
 			   id = rs.getString("user_id");
 			   u = new User(id, name);
+			   users.add(u);
 		   }
 //		   }
 	   } catch (Exception e) {
-		   return "<failure>"+ e.toString() +"</failure>";
+		   
 		// TODO Auto-generated catch block
 	} finally {
 	   			if(rs != null) rs.close();
@@ -63,7 +66,7 @@ public class FetchUserService {
 	   			if(con != null) con.close();
 	   	}
    
-      return u.toString();
+      return users;
    }
 
 
