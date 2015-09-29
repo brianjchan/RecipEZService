@@ -42,7 +42,7 @@ public class FetchUserService {
 	   ResultSet rs = null;
 	   try {
 		   ic = new InitialContext();
-			DataSource ds = (DataSource) ic.lookup("java:/mydc");
+			DataSource ds = (DataSource) ic.lookup("java:/mydb");
 		   con =  ((Statement) ds).getConnection();
 		   stmt = con.createStatement();
 		   rs = stmt.executeQuery(sql);
