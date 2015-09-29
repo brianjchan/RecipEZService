@@ -46,8 +46,7 @@ public class FetchUserService {
 		   con =  ((Statement) ds).getConnection();
 		   stmt = con.createStatement();
 		   rs = stmt.executeQuery(sql);
-//		   while(rs.next()) {
-			   returnString = ("<test> Query '" + sql + "' returned " + rs.getString(1) + "</test>");
+		   returnString = ("<test> Query '" + sql + "' returned " + rs.getString(1) + "</test>");
 //		   }
 	   } catch (Exception e) {
 		   return "<failure>"+ e.toString() +"</failure>";

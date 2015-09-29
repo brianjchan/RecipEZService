@@ -90,7 +90,7 @@
                     </security>
                 </datasource>
                 
-				<datasource jndi-name="java:/mydb" enabled="true" use-java-context="true" pool-name="mydb" use-ccm="true">
+				<datasource jndi-name="java:/mydb" enabled="true" use-java-context="true" jta="true" pool-name="my_pool" use-ccm="true">
 					<connection-url>jdbc:mysql://127.12.217.2:3306/recipezservice</connection-url>
 					<driver>mysql</driver>
 				<security>
@@ -123,7 +123,7 @@
                     <driver name="mysql" module="com.mysql.jdbc">
                         <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
                     </driver>
-					<driver name="com.mysql" module="mysql">
+					<driver name="mysql" module="com.mysql">
 					</driver>
                     <driver name="postgresql" module="org.postgresql.jdbc">
                         <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
