@@ -37,7 +37,8 @@
    
 
    <drivers>
-   <driver name="mysql" module="com.mysql">
+      <driver name="mysql" module="com.mysql.jdbc">
+         <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
       </driver>
       <driver name="postgresql" module="org.postgresql.jdbc">
           <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
