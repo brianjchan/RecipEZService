@@ -35,7 +35,7 @@ public class FetchUserService {
    @Produces("text/xml")
    public String listAllMembers() throws SQLException {
 	   String returnString = "";
-	   final String sql = "SELECT * FROM  `Users`";
+	   final String sql = "SELECT * FROM Users";
 	   InitialContext ic;
 	   Connection con = null;
 	   Statement stmt = null;
