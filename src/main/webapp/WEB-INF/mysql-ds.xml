@@ -17,18 +17,20 @@
          <password>sa</password>
       </security>
    </datasource>
-   <datasource jndi-name="java:jboss/datasources/PostgreSQLDS" enabled="${postgresql.enabled}" use-java-context="true" pool-name="PostgreSQLDS" use-ccm="true">
-       <connection-url>jdbc:postgresql://${env.OPENSHIFT_POSTGRESQL_DB_HOST}:${env.OPENSHIFT_POSTGRESQL_DB_PORT}/${env.OPENSHIFT_APP_NAME}</connection-url>
-       <driver>postgresql</driver>
-       <security>
-         <user-name>${env.OPENSHIFT_POSTGRESQL_DB_USERNAME}</user-name>
-         <password>${env.OPENSHIFT_POSTGRESQL_DB_PASSWORD}</password>
-       </security>
-   </datasource>
+   <datasource jndi-name="java:/mydb" enabled="true" use-java-context="false" jta="true" pool-name="my_pool" use-ccm="true">
+	<connection-url>jdbc:mysql://127.12.217.2:3306/recipezservice</connection-url>
+			<driver>mysql</driver>
+			<security>
+			<user-name>adminyHZtReJ</user-name>
+			<password>klvpDbyglamd</password>
+			</security>
+			</datasource>
    <drivers>
+   <driver name="mysql" module="com.mysql.jdbc">
       <driver name="postgresql" module="org.postgresql.jdbc">
           <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
       </driver>
+	  
    </drivers>
 </datasources>
  
