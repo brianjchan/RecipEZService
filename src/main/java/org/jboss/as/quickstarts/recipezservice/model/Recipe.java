@@ -18,6 +18,7 @@ public class Recipe implements Serializable {
    
    //IN MINUTES
    private String preparationTime;
+   
    @XmlElement(name = "ingredients", required = false)
    private ArrayList<String> ingredients;
    
@@ -51,10 +52,22 @@ public class Recipe implements Serializable {
 	   		+ "5) Serve with steamed basmati rice.");
    }
 
-   public String getId() {
+   public Recipe(String recipeName, String recipeID, int stepNumber, String instruction) 
+   {
+	   name = recipeName;
+	   id = recipeID;
+	   instructions.add(stepNumber, instruction);
+   }
+
+public String getId() {
       return id;
    }
 
+   public ArrayList<String> getInstructions()
+   {
+	   return instructions;
+   }
+   
    public void setId(String id) {
       this.id = id;
    }
