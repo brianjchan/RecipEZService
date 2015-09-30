@@ -34,7 +34,11 @@ public class FetchRecipeService {
    @Produces("text/xml")
    public ArrayList<Recipe> listAllMembers() throws SQLException {
 	   ArrayList<Recipe> recipes = new ArrayList<Recipe>();
-	   final String sql = "SELECT * FROM Recipes";
+	   final String sql = "Select * From Recipes rec"
+	   		+ "Left Join Recipe_Steps r_steps"
+	   		+ "On rec.recipe_id = r_steps.recipe_id"
+	   		+ "Left Join Recipe_Step_Ingredients r_s_i"
+	   		+ "On r_steps.recipe_id = r_s_i.recipe_id AND r_steps.step_number = r_s_i.step_number";
 	   InitialContext ic;
 	   Connection con = null;
 	   Statement stmt = null;
@@ -58,6 +62,7 @@ public class FetchRecipeService {
 			   else
 			   {
 				   recipe = new Recipe(recipeName, recipeID, stepNumber, instruction);
+				   recipes.add(recipe);
 			   }
 		   }
 //		   }
